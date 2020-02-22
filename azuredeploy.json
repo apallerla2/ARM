@@ -1,0 +1,26 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+  "contentVersion": "1.0.0.0",
+  "outputs": {},
+  "parameters": {
+    "rgLoction": {
+      "type": "string",
+      "defaultValue": "EastUS"
+
+    },
+    "rgName": {
+      "type": "string",
+      "defaultValue": "RGARM"
+    }
+  },
+  "resources": [
+    {
+      "apiVersion": "2018-05-01",
+      "location": "[parameters('rgLoction')]",
+      "name": "[parameters('rgName')]",
+      "type": "Microsoft.Resources/resourceGroups"
+    }
+  ],
+  "variables": {}
+ 
+}
